@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1b6ca8"
+    android:fadingEdge="vertical"
+    android:padding="0dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Trivia_yexy"
+        android:layout_width="154dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/caesar_dressing"
+        android:text="TRIVIA"
+        android:textColor="#A68951"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/question_text"
+        android:layout_width="409dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:background="#feb300"
+        android:foregroundGravity="center"
+        android:padding="0dp"
+        app:cardBackgroundColor="#b9ebcc"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Trivia_yexy">
+
+        <TextView
+            android:id="@+id/ques_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|fill"
+            android:padding="10dp"
+            android:text="the question is going to be here"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/true_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="92dp"
+        android:background="#d92027"
+        android:shadowColor="#FFFFFF"
+        android:text="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_text" />
+
+    <Button
+        android:id="@+id/false_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="68dp"
+        android:background="#d92027"
+        android:text="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_text" />
+
+    <ImageButton
+        android:id="@+id/prev_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:background="#ff5722"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/true_button"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="28dp"
+        android:background="#ff5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/false_button"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="36dp"
+        android:text="0/100"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Trivia_yexy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
